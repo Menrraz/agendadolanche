@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Outfit:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+:root {
+    --orange01: #f9bb6b;
+    --orange02: #f79210;
+    --blue01: #c2ebfb;
+    --blue02: #32bdf2;
+    --blue03: #1b62b6;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--orange02);
+    font-size: 10px;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+} 
+body::-webkit-scrollbar-track {
+    background: var(--orange01);
+} 
+body::-webkit-scrollbar-thumb {
+    background-color: var(--blue03);
+    border-radius: 10px;
+    border: 2.5px solid var(--orange01);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+@media (min-width: 380px) {
+    main {
+        margin: 5px auto 10px auto;
+        width: 368px;
+    }
+}
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue03);
+}
+header img {
+    margin-right: 10px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+}
+section {
+    width: 98%;
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    font-family: 'Merriweather';
+    font-weight: 400;
+    color: white;
+}
+h2 {
+    font-size: 1.9em;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    background-color: var(--blue03);
+    color: white;
+    padding: 5px;
+    margin: 16.6px auto 16.6px auto;
+    width: 91%;
+    border-radius: 5px;
+}
+select {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    font-size: 2em;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    color: var(--orange02);
+    border-radius: 8px;
+    border: 2px solid var(--blue03);
+}
+option:hover {
+    color: orangered;
+}
+option:checked {
+    color: orangered;
+}
+p {
+    font-size: 2em;
+}
+label {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2em;
+}
+.lanche {
+    display: flex;
+    flex-direction: column;
+}
+input[type=button] {
+    display: block;
+    margin: 20px auto 15px auto;
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    width: 95%;
+    cursor: pointer;
+    background-color: var(--blue03);
+    border: 0px solid var(--orange02);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+input[type=button]:active {
+    background-color: var(--orange02);
+    color: var(--blue03);
+}
+input[type=button]:hover {
+    background-color: #17539b;
+}
+div {
+    text-align: center;
+}
+.result {
+    display: block;
+    width: 98%;
+}
+#warning {
+    font-size: 1.2em;
+    margin: 5px 0 10px 0;
+    text-align: center;
+    color: grey;
+}
+#empty {
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: #343434;
+    margin: 0;
+    margin: 0 auto 0 auto;
+    background-color: var(--orange01);
+    width: 91%;
+    padding: 4px;
+}
+.text {
+    font-size: 1.7em;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: -50px;
+    color: white;
+    z-index: 1;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+.warning2 {
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin: 0px 0px 6px 0px;
+}
+a {
+    color: var(--blue03);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: #ffffffa6;
+    text-align: center;
+    font-size: 0.6em;
+    flex-direction: column;
+    position: inherit;
+    bottom: 0;
+    margin: 5px 0 50px 0;
+    font-family: 'Lato', sans-serif;
+}
+footer p {
+    margin: 5px;
+}

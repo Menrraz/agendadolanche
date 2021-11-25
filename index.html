@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <p class='warning2'>Esse site não foi feito pelo <a href="https://www.supermercadosmundial.com.br/">Supermercados Mundial</a>.</p>
+        <section>
+            <header>
+                 <h1>Agenda do Lanche</h1>
+                 <img src="https://www.supermercadosmundial.com.br/assets/images/favicon-192x192.png" alt="mundial logo" class='logo'>
+            </header>
+        <form action="">
+            <h2>Quando é sua próxima folga?</h2>
+            <select name="domingo" id="sunday" size="3" onclick=dayOff() required>
+                <option value="1" id='sun1' class='dom' selected>Domingo atual<span></span></option>
+                <option value="2" id='sun2' class='dom'>O outro domingo<span></span></option>
+                <option value="3" id='sun3' class='dom'>Sem ser esse o outro </option>
+            </select>
+            <h2>Qual será o próximo lanche?</h2>
+            <p id="warning"></p> <!-- Se for domingo -->
+            <select name="snack" id="snack" size="2" required>
+                <option value="1" id='hamburguer' selected>Hambúrguer<i class="fas fa-hamburger"></i></option>
+                <option value="2" id='cachorro'>Cachorro-Quente </option>
+            </select>
+            <input type="button" value="Calcular" onclick="calcular()">    
+        </form>
+        </section>
+        <section class='result'>
+        <p id="empty"></p>
+            <div id="res"><p id='text' class='text'></div>
+            <div id="res2"><p id='text2' class='text'></p></div>
+            <div id="res3"><p id='text3' class='text'></p></div>
+            <div id="res4"><p id='text4' class='text'></p></div>
+            <div id="res5"><p id='text5' class='text'></p></div>
+        </section>
+        <footer>
+            <p>&copy; Por <strong>Guilherme Menrraz</strong></p>
+        </footer>
+    </main>
+    <script src='script.js'></script>
+</body>
+</html>
