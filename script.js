@@ -174,7 +174,7 @@ function style(i) { // Estilos das fotos
     imgs[i].style.display = 'block'
     imgs[i].style.margin = '0 auto 10px auto'
     imgs[i].style.boxShadow = '2px 3px 7px 0px grey'
-    imgs[i].style.filter = 'brightness(0.45)'
+    imgs[i].style.filter = 'brightness(0.5)'
     var s = 0
     var folga = 1
     for (let i = 0; i < 4; i++) {
