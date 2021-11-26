@@ -1,4 +1,4 @@
-const sun = document.getElementById('sunday') // Folga do domingo / 1 = atual / 2 = Proximo / 3 = O outro
+const sun = document.getElementById('sunday')// Folga do domingo / 1 = atual / 2 = Proximo / 3 = O outro
 const snack = document.getElementById('snack') // 1 = Hamburguer  / 2 = Cachorro-Quente 
 const res = document.getElementById('res')
 const res2 = document.getElementById('res2')
@@ -133,6 +133,10 @@ if (weekDay == 0) { // Se o dia atual for domindo haverá um aviso na tela
 // Calculo de Folgas
 let freeDay = 0 // Devo chamá-lo fora da função para usar ele na função style() e ele também não pode ser const.
 function dayOff() {
+    if (sun.value == 0) {
+        empty.style.display = 'block'
+        empty.innerHTML = "Por favor, selecione todos os dados."
+    }
     if (sun.value == 1) {
         freeDay = 1
     }
@@ -176,23 +180,20 @@ function style(i) { // Estilos das fotos
     for (let i = 0; i < 4; i++) {
         if (freeDay == folga) {
             texts[i].innerHTML = '[FOLGA]'
-            console.log(`freeDay = folga`)
             imgs[i].style.filter = 'brightness(0.3) grayscale(1)'
         } else {
             texts[i].innerHTML = `Dia ${dayF+s > dayMonth() ? dayF+s-dayMonth(): dayF+s} (daqui há ${dayF+s - day} dias)` // utilidade do dayF já ser o próximo domingo
-            console.log(`freeday =/ folga`)
         }
         if (folga >= 3) {
             folga = 1
-            console.log(`Folga maior que 3`)
         } else {
             folga++
-            console.log(folga)
         }
         s+=7 // Somando +7 para o próximo domingo
     }
 }
 function calcular() {
+    dayOff() // O mobile só funciona se chamar a função aqui.
     if (sun.value.length == 0 || snack.value.length == 0) {
         let empty = document.getElementById('empty')
         empty.style.display = 'block'
@@ -213,3 +214,6 @@ function calcular() {
     }
 }
 snack.value = 0 // Para o Select snack permanecer na primeira opção escolhida pelo usuário
+// Auto selected pois no HTML não funciona propriamente
+const sun_selected = document.getElementById('sunday').value = '1'
+const snack_selected = document.getElementById('snack').value = '1'
